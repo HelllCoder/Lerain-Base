@@ -1,0 +1,425 @@
+/* =========================== Containers ========================= */
+body
+{
+    margin: 0px auto;
+    background-image: url('images/lerain.jpg');
+    font-family: Arial;
+    min-width: 600px;
+	background-attachment: fixed;
+}
+
+
+/* Footer of page, here are some informations about used technologies, year, etc. */
+footer
+{
+	display: block;
+	border-top: 2px solid grey;
+	box-shadow: 0 0 10px green;
+	clear: both;
+	width: 100%;
+/*background-color: #B5B5B5;	*/
+	background-color: rgba(0, 128, 0, 0.4);
+	padding: 10px 0;
+	font-family: footer;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+}
+
+/* Main content of page */
+main
+{
+	display: block;
+	min-height: 600px;
+    padding: 110px 30px;
+}
+
+/* Used in "Home" - here are green circles and appropriate text  */
+section#leftArea
+{
+	display: block;
+	margin: auto;
+	padding: 5px;
+	width: 900px;
+	height: 650px;
+	background-image: url("images/monitorLS.png");
+}
+
+
+/* We do not want to display last div - because of adds :) */
+div:last-of-type {
+	display: none;
+}
+
+/* For changelogs. Because they can be long, they must be in special container,
+with some additional properties */
+pre#changelog
+{
+	border: 5px ridge green;
+	border-radius: 15px;
+	background-color: rgba(0, 128, 0, 0.15);
+	box-shadow: inset 0 0 15px green;
+	min-width: 400px;
+	max-width: 900px;
+	width: 700px;
+	height: 500px;
+	max-height: 500px;
+	padding: 15px;
+	overflow: auto;
+}
+
+/* Various texts will be in "special boxes" - because main color of our page is green,
+and background also, and we want to have the texts visible, so these special boxes
+should have different background */
+
+article.lerainBox, aside.lerainBox
+{
+	display: block;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	margin-bottom: 50px;
+	padding: 0 15px 5px 0;
+
+}
+
+
+
+/* ================ Headlines, signs, links, etc ================== */
+
+/* Standard link */
+a
+{
+    text-decoration: none;
+	font-weight: bold;
+    color: green;
+	outline: 0;
+}
+
+/* When mouse is over standard link */
+a:hover 
+{
+/*color: #04B51B;*/
+	color: teal;
+}
+
+/* Appropriate texts for previously mentioned green circles */
+
+p#ls1, p#ls2, p#ls3
+{
+	display: inline-block;
+	margin-top: -50px;
+	padding: 0 0 50px 60px;
+	font-size: 30px;
+	vertical-align: middle;
+}
+
+/* Headlines of highest level */
+h1
+{
+	font-family: headline;
+	color: teal;
+	font-size: 35px;
+	text-shadow: 1px 1px 3px teal;
+}
+
+/* Little less more important headlines */
+h2
+{
+	font-family: headline;
+	color: green;
+	font-size: 20px;
+	text-shadow: 1px 1px 3px green;
+}
+
+/* Even less more important headlines (f.e. versions in changelog) */
+h3 
+{
+	font-family: headline;
+	color: green;
+	font-size: 15px;
+	text-shadow: 1px 1px 3px green;
+}
+
+/* Text, why should visitor use contact form. It is separated from other content by
+thin border, and some additional space (margin and padding) */
+p.specialMessage {
+	padding-bottom: 15px;
+	border-bottom: 1px solid black;
+	margin-bottom: 25px;
+	color: teal;
+}
+
+/* We don't want to have too wide paragraphs in some text, but what we WANT is
+   to have them properly justified */
+p.lerainText
+{
+	display: inline-block;
+	padding-right: 50px;
+	text-align: justify;
+	margin-left: 15px;
+	color: green;
+}
+
+/* After article (in NEWS section) there should be some informations about author
+and creation-date of this article */
+small.authorNotes {
+	display: block;
+	text-transform: uppercase;
+	color: green;
+	font-weight: bold;
+	margin-left: 15px;
+}
+
+/* For dislaying error messages */
+p.error
+{
+	font-weight: bold;
+	color: maroon;
+}
+
+/* =============================== MENU ===================================== */
+
+/* Navigation menu for page */
+nav#main
+{
+/*background-color: #B5B5B5;*/
+	background-color: rgba(0, 128, 0, 0.4);
+    border-bottom: 2px solid grey;
+	box-shadow: 0 0 10px green;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/* Tab of menu currently visited by user */
+nav#main a#actual
+{
+/*background-color: #A3A2A2;*/
+	background-color: rgba(84, 84, 84, 0.4);
+}
+
+/* One tab of menu */
+nav#main a
+{
+    display: inline-block;
+    width: 16.66%;
+    padding: 25px 0;
+    /*background-image: url('images/headerBg.png');*/
+    text-align: center;
+    font-family: menu;
+    font-size: 21px;
+    color: black;
+    font-weight: bold;
+	outline: 0;
+    transition: background-color 0.3s linear, color 0.3s linear;
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+	-o-transition: background-color 0.3s linear, color 0.3s linear;
+    margin-right: -4px;
+  
+}
+
+/* When mouse is over that tab */
+nav#main a:hover
+{
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+}
+
+/* ============================ Images ============================= */
+
+/* Our logo - LerainLogo */
+img#lerainLogo 
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ============================= Used fonts ======================= */
+
+/* This font can be used by various headlines */
+@font-face
+{
+    font-family: headline;
+    src: url('fonts/headline.otf');
+}
+
+/* This font can be used in menu, footer, etc. */
+@font-face
+{
+	font-family: footer;
+	src: url('fonts/head.otf');
+}
+
+/* This font can be used in menu, footer, etc. */
+@font-face
+{
+	font-family: menu;
+	src: url('fonts/desyrel.ttf');
+}
+
+
+/* This font can be used for categories of news */
+@font-face
+{
+	font-family: planet;
+	src: url('fonts/planet.otf');
+}
+
+
+/* ============================== FORMS ============================ */
+
+/* Standard(our standard ofcs :) form controls - they are more rounded than default */
+input[type = "text"], input[type = "email"], textarea
+{
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+
+/* If label belongs to big control, it should be at top part of that control. Also,
+we want spaces between form's columns */
+th.label
+{
+	vertical-align: top;
+	padding-right: 35px;
+	text-align: left;
+}
+
+/* Submit button */
+input[type="submit"]#formSubmit
+{
+	border-style: outset;
+	border-radius: 6px;
+	padding: 5px 7px;
+	font-family: Arial;
+	cursor: pointer;
+	outline: 0;
+	transition: background-color 0.33s linear;
+	-webkit-transition: background-color 0.33s linear;
+	-o-transition: background-color 0.33s linear;
+
+}
+
+/* When is mouse over the submit button */
+input[type="submit"]#formSubmit:hover
+{
+	background-color: #E6FAC5;
+}
+
+/* When is the submit button clicked */
+input[type="submit"]#formSubmit:active
+{
+	color: teal;
+}
+
+/* Add separating space to this table cell */
+td.space {
+	padding-bottom: 15px;
+}
+
+/* =========================== TEAM ================================ */
+section#bigMemberBox
+{
+	display: block;
+	box-shadow: 0 0 20px black;
+}
+
+/* Each member has his own "aside" container :) */
+aside.teamMemberBox
+{
+	border: 1px solid grey;
+	padding: 15px;
+}
+
+/* What this concrete person in LS do, will be colourful */
+p.jobType {
+	color: teal;
+}
+
+/* There will be darker and lighter "member-boxes". This one is darker */
+aside.firstBox
+{
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* And this one is lighter */
+aside.secondBox
+{
+	background-color: rgba(194, 194, 194, 0.4);
+}
+
+/* And this one for special purposes (e.g. YOU in TEAM section) */
+aside.specialBox
+{
+	background-color: rgba(245, 184, 0, 0.4);
+}
+
+/* ======================== NEWS =================================== */
+
+div.headInfo
+{
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+span.category 
+{
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: green;
+	font-variant: small-caps;
+	font-weight: bold;
+	transform: scale(1.2, 1.4);
+	font-family: headline;
+}
+
+h3.newsArticleHeadline
+{
+	display: inline-block;
+	margin-left: 30px;
+}
+
+
+/* ==================== "DEPRECATED" (actually) ==================== */
+/* LERAINSOFT SIGN - for now it haven't any use, but maybe we will need it later
+h1#mainHeadline
+{
+    display: block;
+    margin-top: 0px;
+    font-family: headline;
+    font-weight: bold;
+    /*color: #4777FC;*/
+    color: bronze;
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 20px;
+    text-shadow: 0 0 7px lime;
+} 
+
+Green circles - maybe there are for better visual looking? I don't know :)
+div#gulicka1, div#gulicka2, div#gulicka3
+{
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #C3F79C;
+	width: 130px;
+	height: 100px;
+	padding-bottom: 30px;
+	border: 8px solid #86FA2D;
+	color: #95FC47;
+	transition: background-color 0.3s linear, color 0.3s linear;
+	-webkit-transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+What happens, when mouse is over previously mentioned green circles 
+div#gulicka1:hover, div#gulicka2:hover, div#gulicka3:hover 
+{
+	cursor: help;
+	background-color: #86FA2D;
+	border-color: #C3F79C;
+}
+*/
+

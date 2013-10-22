@@ -1,0 +1,76 @@
+body
+{
+    background-color: #71FF61;
+    margin: 0px auto;
+    padding: 20px;
+    min-width: 600px;
+}
+
+@font-face
+{
+    font-family: headline;
+    src: url('jam.ttf');
+}
+
+@font-face
+{
+    font-family: standard;
+    src: url('exo.otf');
+}
+
+h1
+{
+    font-family: headline;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    color: grey;
+}
+
+input
+{
+	 display: block;
+    font-family: standard;
+    font-size: 16px;
+    padding: 5px;
+    color: grey;
+    border-radius: 5px;
+    margin: 0 auto 15px;
+    width: 400px;
+    min-width: 200px;
+}
+
+input[disabled]
+{
+	background-color: #DDD8E0;
+}
+
+button#convertButton
+{
+	background-color: grey;
+	color: #14E01B;
+	padding: 10px;
+	border-radius: 25%;
+	border: 5px solid #14E01B;
+	display: block;
+	margin: 0 auto 50px;
+	box-shadow: 0 0 10px grey;
+	cursor: pointer;
+	outline: 0;
+}
+
+p#errorMessage
+{
+	text-align: center;
+	color: red;
+	font-size: 23px;
+	font-weight: bold;
+	font-family: standard;
+}
+
+::-moz-selection
+{
+	color: blue;
+}
+
+div:last-of-type {display: none; }
