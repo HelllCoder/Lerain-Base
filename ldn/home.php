@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset = "utf-8">
-        <meta name = "description" content = "Domovská stránka a vývojová základna LerajnSoft-u">
-        <meta name="author" content="Benji" >
+        <meta name = "description" content = "LerainSoft Developer Network">
+        <meta name="author" content = "LerainSoft" >
 		<link rel = "stylesheet" href = "../styles.css">
 		<link rel = "stylesheet" href = "ldn.css">
         <title> Lerain Developer Network | Home</title>
