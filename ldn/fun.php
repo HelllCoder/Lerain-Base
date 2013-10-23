@@ -38,6 +38,9 @@
 				<a title = "Place for experiment source codes, tests etc." href = "experiments.php" > Experiments </a>
 				<a title = "Programming tutorials by members of LS - we want to learn from each other" href = "wiki.php"> Wiki </a>
 				<a id = "current" title = "Something funny" href = "fun.php"> Fun corner </a>
+				<?php if ($_SESSION["login"] == "Madara" || $_SESSION["login"] == "Sawerick"){?>
+				    <a href= "admin/home.php">Administration</a>";
+				<? } ?>
 				<a title = "Settings of this LDN account" href = "settings.php"> Settings </a>
 				<a title = "Log out from LDN" href = "logout.php"> Logout </a>
 				

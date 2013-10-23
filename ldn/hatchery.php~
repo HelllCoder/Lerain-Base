@@ -6,7 +6,7 @@
         <meta name="author" content="Benji" >
 		<link rel = "stylesheet" href = "../styles.css">
 		<link rel = "stylesheet" href = "ldn.css">
-        <title> Lerain Developer Network | States</title>
+        <title> Lerain Developer Network | Hatchery</title>
     </head>
     
     <body>
@@ -29,18 +29,15 @@
 				
 				<h2 id = "panelSign"> LDN Panel </h2>
 				<p id = "loggedUser">Logged developer: <? echo "".$_SESSION['login']."";?> </p>
-				<p id = "headerEnd">Your role: <? echo "".$_SESSION['funkce']."";?> </p>				
+				<p id = "headerEnd">Your role: <? echo "".$_SESSION['funkce']."";?> </p>
 				<a title = "Home + Chat" href = "home.php"> Home (+ chat) </a>
 				<a title = "Tasks for developers" href = "tasks.php"> Tasks </a>
-				<a id = "current" title = "States of projects" href = "states.php"> Project states </a>
-				<a title = "Place for ideas and new projects" href = "hatchery.php"> Hatchery </a>
+				<a title = "States of projects" href = "states.php"> Project states </a>
+				<a id = "current" title = "Place for ideas and new projects" href = "hatchery.php"> Hatchery </a>
 				<a title = "Place for graphics and graphic ideas" href = "graphics.php"> Graphics </a>
 				<a title = "Place for experiment source codes, tests etc." href = "experiments.php" > Experiments </a>
 				<a title = "Programming tutorials by members of LS - we want to learn from each other" href = "wiki.php"> Wiki </a>
 				<a title = "Something funny" href = "fun.php"> Fun corner </a>
-				<?php if ($_SESSION["login"] == "Madara" || $_SESSION["login"] == "Sawerick"){?>
-				    <a href= "admin/home.php">Administration</a>";
-				<? } ?>
 				<a title = "Settings of this LDN account" href = "settings.php"> Settings </a>
 				<a title = "Log out from LDN" href = "logout.php"> Logout </a>
 				
