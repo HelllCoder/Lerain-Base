@@ -11,8 +11,8 @@ session_start(); // Budeme pracovat se session, musíme je nastartovat.
 if(isset($_POST['username']))
 {
 	require 'db.php';
-	$name = $_POST['username'];
-	$pass = md5($_POST['password']);
+	$name = mysql_real_escape_string($_POST['username']);
+	$pass = mysql_real_escape_string(md5($_POST['password']));
 	$successPage = "ldn/home.php";
 	$failPage = "authfailed.php";
 	$query = MySQL_Query("SELECT * FROM `ldn` WHERE `jmeno` = '$name' and `heslo` = '$pass'") or die (mysql_error());
