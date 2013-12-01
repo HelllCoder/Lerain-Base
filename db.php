@@ -21,5 +21,11 @@ function getOne($query,$args)
 	return $stat->fetch();
 	
 }
-fun
+function getAll($query,$args)
+{
+	
+		$stat = $this->connection->prepare($query);
+	$stat->execute($args);
+	return $stat->fetchAll();
+}
 	}
