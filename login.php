@@ -15,9 +15,9 @@ if(isset($_POST['username']))
 	$pass = md5($_POST['password']);
 	$successPage = "ldn/home.php";
 	$failPage = "authfailed.php";
-	$query = MySQL_Query("SELECT * FROM `ldn` WHERE `jmeno` = '$name' and `heslo` = '$pass'") or die (mysql_error());
+	$Vysledek = Database::getInstance()->getOne("SELECT * FROM `ldn` WHERE `jmeno` = ? and `heslo` = ?",array($name,$pass));
 	// Vybereme uživatele se zadaným jménem a heslem
-	$Vysledek = mysql_fetch_array($query);
+	
 	$Vysledek['jmeno']; 
 	if($Vysledek['jmeno'])
 	{ // pokud tato proměnná obsahuje data, bylo zadané správné jméno a heslo
@@ -28,11 +28,11 @@ if(isset($_POST['username']))
 	}
 	else
 	{
-		echo "yds";
+		
 		header("location: authfailed.php"); // špatně zadané údaje
-		mysql_free_result($query);
+	
 		ob_end_flush();
 	}
-	var_dump($query);
+
 }	
 ?>
