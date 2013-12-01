@@ -1,5 +1,12 @@
 <?php 
- $spojeni = mysql_connect("localhost","lerainsoft","lerainsoft273" ) or die ('Spatne zadane udaje (asi heslo, server nebo jmeno.) v inc/db.php');
-	mysql_select_db("czsrv" , $spojeni) or die ('Spatne zadana databaze v inc/db.php');
-	mysql_query("SET NAMES utf8");
+try
+{
+ $spojeni = new PDO("mysql:host=localhost;dbname=czsrv","lerainsoft","lerainsoft273",array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8"));
+	$spojeni->query("SET");
+}
+catch(Exception e)
+{
+	die("Database Error!".$e->getMessage());
+	
+}
 ?>
